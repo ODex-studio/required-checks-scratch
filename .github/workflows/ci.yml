@@ -4,5 +4,8 @@ on:
 jobs:
   checks:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        py: ["3.13", "3.14"]
     steps:
-      - run: echo "the checks ran"
+      - run: echo "the checks ran on ${{ matrix.py }}"
