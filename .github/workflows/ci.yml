@@ -1,6 +1,8 @@
 name: ci
 on:
   pull_request:
+    paths:
+      - "src/**"
 jobs:
   checks:
     runs-on: ubuntu-latest
