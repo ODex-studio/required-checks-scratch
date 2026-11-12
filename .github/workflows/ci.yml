@@ -2,12 +2,10 @@ name: ci
 on:
   pull_request:
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - run: exit 1
   checks:
-    needs: build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        py: ["3.13", "3.14"]
     steps:
-      - run: echo "the checks ran"
+      - run: echo "the checks ran on ${{ matrix.py }}"
