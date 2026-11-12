@@ -1,0 +1,8 @@
+name: ci
+on:
+  pull_request:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "the checks ran"
