@@ -5,4 +5,4 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "the checks ran"
+      - run: exit 1
