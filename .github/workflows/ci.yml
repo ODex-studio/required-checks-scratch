@@ -3,6 +3,7 @@ on:
   pull_request:
 jobs:
   checks:
+    if: ${{ contains(github.event.pull_request.title, 'run-the-checks') }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "the checks ran"
