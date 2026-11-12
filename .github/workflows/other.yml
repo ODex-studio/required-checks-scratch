@@ -1,0 +1,8 @@
+name: other
+on:
+  pull_request:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "a different job with the same name"
