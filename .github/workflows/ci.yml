@@ -2,8 +2,12 @@ name: ci
 on:
   pull_request:
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
   checks:
-    if: ${{ contains(github.event.pull_request.title, 'run-the-checks') }}
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - run: echo "the checks ran"
